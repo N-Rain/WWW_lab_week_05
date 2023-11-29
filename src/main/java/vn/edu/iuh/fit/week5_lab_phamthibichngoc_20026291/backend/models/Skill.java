@@ -36,4 +36,57 @@ public class Skill {
     @OneToMany(mappedBy = "skill")
     private List<CandidateSkill> candidateSkills;
 
+    public String getSkill_description() {
+        return skill_description;
+    }
+
+    public void setSkill_description(String skill_description) {
+        this.skill_description = skill_description;
+    }
+
+    public String getSkill_name() {
+        return skill_name;
+    }
+
+    public void setSkill_name(String skill_name) {
+        this.skill_name = skill_name;
+    }
+
+    public SkillType getType() {
+        return type;
+    }
+
+    public void setType(SkillType type) {
+        this.type = type;
+    }
+
+    public List<JobSkill> getJobSkills() {
+        return jobSkills;
+    }
+
+    public void setJobSkills(List<JobSkill> jobSkills) {
+        this.jobSkills = jobSkills;
+    }
+
+    public List<CandidateSkill> getCandidateSkills() {
+        return candidateSkills;
+    }
+
+    public void setCandidateSkills(List<CandidateSkill> candidateSkills) {
+        this.candidateSkills = candidateSkills;
+    }
+
+
+
+    @Override
+    public String toString() {
+        return "Skill{" +
+                "id=" + id +
+                ", skill_description='" + skill_description + '\'' +
+                ", skill_name='" + skill_name + '\'' +
+                ", type=" + type +
+                ", jobSkills=" + jobSkills +
+                ", candidateSkills=" + candidateSkills +
+                '}';
+    }
 }

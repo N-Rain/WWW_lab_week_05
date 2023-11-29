@@ -1,7 +1,11 @@
 package vn.edu.iuh.fit.week5_lab_phamthibichngoc_20026291.backend.models;
 
 import jakarta.persistence.*;
-import lombok.*;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import vn.edu.iuh.fit.week5_lab_phamthibichngoc_20026291.backend.models.enums.CountryCode;
 
 
@@ -24,6 +28,8 @@ public class Address {
     private CountryCode country;
     @Column(name = "zipcode", length = 7)
     private String zipcode;
+
+
 
     @Override
     public String toString() {

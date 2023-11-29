@@ -34,4 +34,55 @@ public class Job {
     @OneToMany(mappedBy = "job")
     private List<JobSkill> jobSkills;
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getJob_desc() {
+        return job_desc;
+    }
+
+    public void setJob_desc(String job_desc) {
+        this.job_desc = job_desc;
+    }
+
+    public String getJob_name() {
+        return job_name;
+    }
+
+    public void setJob_name(String job_name) {
+        this.job_name = job_name;
+    }
+
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
+    }
+
+    public List<JobSkill> getJobSkills() {
+        return jobSkills;
+    }
+
+    public void setJobSkills(List<JobSkill> jobSkills) {
+        this.jobSkills = jobSkills;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Job{" +
+                "id=" + id +
+                ", job_desc='" + job_desc + '\'' +
+                ", job_name='" + job_name + '\'' +
+                ", company=" + company +
+                ", jobSkills=" + jobSkills +
+                '}';
+    }
 }

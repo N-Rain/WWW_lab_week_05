@@ -11,6 +11,12 @@ public enum SkillLevel {
 
     BEGINER(1);
 
+    private final int value;
     SkillLevel(int value) {
+        this.value = value;
+    }
+
+    public int getValue() {
+        return value;
     }
 }
